@@ -37,3 +37,9 @@ variable "capabilities" {
   type = list(any)
 }
 
+variable "scale_type" {}
+
+variable "task_minimum" {}
+
+variable "task_maximum" {}
+
