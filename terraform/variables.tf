@@ -29,6 +29,8 @@ variable "ssm_private_subnet_2" {}
 
 variable "ssm_private_subnet_3" {}
 
+variable "ssm_alb" {}
+
 variable "environment_variables" {
   type = list(any)
 }
@@ -74,4 +76,13 @@ variable "scale_in_period" {}
 variable "scale_in_evaluation_periods" {}
 
 variable "scale_in_cooldown" {}
+
+#### Auto Scaling Tracking CPU ####
+
+variable "scale_tracking_cpu" {}
+
+### Tracking Requests
+
+
+variable "scale_tracking_requests" {}
 
