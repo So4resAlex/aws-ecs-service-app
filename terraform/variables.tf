@@ -33,7 +33,7 @@ variable "ssm_vpc_id" {
   type        = string
 }
 
-variable "ssm_listner" {
+variable "ssm_listener" {
   description = "ID do listner salvo no SSM"
   type        = string
 

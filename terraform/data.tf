@@ -16,5 +16,5 @@ data "aws_ssm_parameter" "private_subnet_3" {
 
 
 data "aws_ssm_parameter" "listener" {
-  name = var.ssm_listner
+  name = var.ssm_listener
 }
