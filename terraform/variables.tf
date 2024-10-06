@@ -33,6 +33,10 @@ variable "service_launch_type" {
   description = "Tipo de lançamento para o serviço no ECS, como 'FARGATE' ou 'EC2'."
 }
 
+variable "service_hosts" {
+  type        = list(string)
+  description = "Lista de hosts associados ao serviço, geralmente especificados para configurações DNS."
+}
 variable "service_task_count" {
   type        = number
   description = "Número de instâncias da tarefa a serem executadas simultaneamente no serviço."
