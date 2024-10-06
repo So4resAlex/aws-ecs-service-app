@@ -56,10 +56,10 @@ variable "ssm_private_subnet_3" {
 
 variable "environment_variables" {
   description = "Lista de variáveis de ambiente que serão passadas para o serviço."
-  type = list(any)
+  type        = list(any)
 }
 
 variable "capabilities" {
   description = "Lista de capacidades necessárias para a execução do serviço, como 'CAP_SYS_ADMIN' para recursos Linux específicos."
-  type = list(any)
+  type        = list(any)
 }
