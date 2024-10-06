@@ -1,7 +1,7 @@
 module "servie" {
   source = "/home/alex/Desktop/repos-git/aws-ecs-service-module"
 
-  region = var.region
+  region                      = var.region
   cluster_name                = var.cluster_name
   service_name                = var.service_name
   service_port                = var.service_port
