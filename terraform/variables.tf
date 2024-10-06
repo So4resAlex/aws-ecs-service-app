@@ -28,6 +28,11 @@ variable "service_memory" {
   #   type = 
 }
 
+variable "service_healthcheck" {
+  type        = map(any)
+  description = "Configuração do health check do serviço, incluindo caminho e protocolo."
+}
+
 variable "ssm_vpc_id" {
   description = "ID da vpc salvo no SSM"
   type        = string
