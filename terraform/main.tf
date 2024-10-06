@@ -1,4 +1,4 @@
-module "servie" {
+module "service" {
   source = "/home/alex/Desktop/repos-git/aws-ecs-service-module"
 
   region                      = var.region
@@ -10,7 +10,7 @@ module "servie" {
   service_listener            = data.aws_ssm_parameter.listener.value
   service_task_execution_role = aws_iam_role.main.arn
 
-  environments_variables = var.environment_variables
+  environment_variables = var.environment_variables
 
   capabilities = var.capabilities
 

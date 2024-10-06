@@ -15,7 +15,7 @@ variable "service_name" {
 
 variable "service_port" {
   description = "Porta do servico"
-  type        = number
+  type        = string
 }
 
 variable "service_cpu" {
