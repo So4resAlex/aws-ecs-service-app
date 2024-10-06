@@ -53,3 +53,13 @@ variable "ssm_private_subnet_3" {
   description = "ID da subnet C salvo no SSM"
   type        = string
 }
+
+variable "environment_variables" {
+  description = "Lista de variáveis de ambiente que serão passadas para o serviço."
+  type = list(any)
+}
+
+variable "capabilities" {
+  description = "Lista de capacidades necessárias para a execução do serviço, como 'CAP_SYS_ADMIN' para recursos Linux específicos."
+  type = list(any)
+}
