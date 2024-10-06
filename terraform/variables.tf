@@ -28,6 +28,16 @@ variable "service_memory" {
   #   type = 
 }
 
+variable "service_launch_type" {
+  type        = string
+  description = "Tipo de lançamento para o serviço no ECS, como 'FARGATE' ou 'EC2'."
+}
+
+variable "service_task_count" {
+  type        = number
+  description = "Número de instâncias da tarefa a serem executadas simultaneamente no serviço."
+}
+
 variable "service_healthcheck" {
   type        = map(any)
   description = "Configuração do health check do serviço, incluindo caminho e protocolo."
