@@ -15,17 +15,17 @@ variable "service_name" {
 
 variable "service_port" {
   description = "Porta do servico"
-  type        = string
+  type        = number
 }
 
 variable "service_cpu" {
   description = "CPU que sera alocada para as tasks"
-  #   type = 
+  type        = number
 }
 
 variable "service_memory" {
   description = "Memória que sera alocada para as tasks"
-  #   type = 
+  type        = number
 }
 
 variable "service_launch_type" {
