@@ -33,12 +33,21 @@ module "service" {
 
   ### Auto Scaling CPU ###
 
-  scale_out_cpu_threshold = var.scale_out_cpu_threshold
-  scale_out_adjustment = var.scale_out_adjustment
+  ### Scale out ###
+  scale_out_cpu_threshold       = var.scale_out_cpu_threshold
+  scale_out_adjustment          = var.scale_out_adjustment
   scale_out_comparison_operator = var.scale_out_comparison_operator
-  scale_out_statistic = var.scale_out_statistic
-  scale_out_period = var.scale_out_period
-  scale_out_evaluation_period = var.scale_out_evaluation_period
-  scale_out_cooldown = var.scale_out_cooldown
+  scale_out_statistic           = var.scale_out_statistic
+  scale_out_period              = var.scale_out_period
+  scale_out_evaluation_period   = var.scale_out_evaluation_period
+  scale_out_cooldown            = var.scale_out_cooldown
 
+  ### Scale in ###
+  scale_in_cpu_threshold       = var.scale_in_cpu_threshold
+  scale_in_adjustment          = var.scale_in_adjustment
+  scale_in_comparison_operator = var.scale_in_comparison_operator
+  scale_in_statistic           = var.scale_in_statistic
+  scale_in_period              = var.scale_in_period
+  scale_in_evaluation_period   = var.scale_in_evaluation_period
+  scale_in_cooldown            = var.scale_in_cooldown
 }
