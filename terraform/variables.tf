@@ -186,3 +186,9 @@ variable "scale_in_cooldown" {
   description = "Periodo de espera para reavaliar as metricas após uma ação de escalar para baixo"
   default     = 60
 }
+
+variable "scale_tracking_cpu" {
+  type = number
+  description = "Valor de utilização de CPU alvo para o rastreamento de escala, em percentual."
+  default = 80
+}
