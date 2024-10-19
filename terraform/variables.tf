@@ -51,6 +51,11 @@ variable "ssm_vpc_id" {
   description = "ID da vpc salvo no SSM"
   type        = string
 }
+variable "ssm_alb_arn" {
+  type = string
+  description = "ARN do Application Load Balancer usado para rastreamento de solicitaçẽos"
+  default = null
+}
 
 variable "ssm_listener" {
   description = "ID do listner salvo no SSM"
@@ -191,4 +196,9 @@ variable "scale_tracking_cpu" {
   type = number
   description = "Valor de utilização de CPU alvo para o rastreamento de escala, em percentual."
   default = 80
+}
+variable "scale_tracking_requests" {
+  type = number
+  description = "Número alvo de solicitaçãos por segundo para rastreamento de escala"
+  default = 0
 }
