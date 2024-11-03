@@ -29,8 +29,11 @@ variable "service_memory" {
 }
 
 variable "service_launch_type" {
-  type        = string
-  description = "Tipo de lançamento para o serviço no ECS, como 'FARGATE' ou 'EC2'."
+  type = list(object({
+    capacity_provider = string
+    weight            = number
+  }))
+
 }
 
 variable "service_hosts" {
@@ -52,9 +55,9 @@ variable "ssm_vpc_id" {
   type        = string
 }
 variable "ssm_alb_arn" {
-  type = string
+  type        = string
   description = "ARN do Application Load Balancer usado para rastreamento de solicitaçẽos"
-  default = null
+  default     = null
 }
 
 variable "ssm_listener" {
@@ -193,12 +196,12 @@ variable "scale_in_cooldown" {
 }
 
 variable "scale_tracking_cpu" {
-  type = number
+  type        = number
   description = "Valor de utilização de CPU alvo para o rastreamento de escala, em percentual."
-  default = 80
+  default     = 80
 }
 variable "scale_tracking_requests" {
-  type = number
+  type        = number
   description = "Número alvo de solicitaçãos por segundo para rastreamento de escala"
-  default = 0
+  default     = 0
 }
