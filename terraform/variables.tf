@@ -33,7 +33,6 @@ variable "service_launch_type" {
     capacity_provider = string
     weight            = number
   }))
-
 }
 
 variable "service_hosts" {
